@@ -1,0 +1,29 @@
+<h1>Listing lock_requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Islocked</th>
+      <th>Willlock</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lock_requests.each do |lock_request| %>
+      <tr>
+        <td><%= lock_request.user %></td>
+        <td><%= lock_request.isLocked %></td>
+        <td><%= lock_request.willLock %></td>
+        <td><%= link_to 'Show', lock_request %></td>
+        <td><%= link_to 'Edit', edit_lock_request_path(lock_request) %></td>
+        <td><%= link_to 'Destroy', lock_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lock request', new_lock_request_path %>

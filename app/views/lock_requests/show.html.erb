@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lock_request.user %>
+</p>
+
+<p>
+  <strong>Islocked:</strong>
+  <%= @lock_request.isLocked %>
+</p>
+
+<p>
+  <strong>Willlock:</strong>
+  <%= @lock_request.willLock %>
+</p>
+
+<%= link_to 'Edit', edit_lock_request_path(@lock_request) %> |
+<%= link_to 'Back', lock_requests_path %>

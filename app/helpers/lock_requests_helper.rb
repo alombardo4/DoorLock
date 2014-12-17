@@ -1,0 +1,2 @@
+module LockRequestsHelper
+end
